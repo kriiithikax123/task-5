@@ -1,1 +1,5 @@
-# task-5
+For Task 5, I used Wireshark to capture and analyze live network traffic. I started by installing Wireshark and selecting my Wi-Fi network interface to begin the capture. To generate traffic, I visited neverssl.com, a website that uses plain HTTP. After letting the capture run for about a minute, I stopped it and began analyzing the packets.
+
+I applied filters to focus on specific protocols and successfully identified three of them. First, HTTP (Hypertext Transfer Protocol)—I saw GET requests and responses exchanged with neverssl.com, showing how the website was loaded over an unencrypted connection. Second, TCP (Transmission Control Protocol)—this protocol was used to ensure reliable delivery of the HTTP packets, and I observed the three-way handshake and acknowledgment packets. Third, DNS (Domain Name System)—before loading the site, my system performed DNS lookups to resolve the domain name to an IP address, and I could see those query and response packets.
+
+After identifying these protocols, I exported the captured traffic as a .pcapng file. I also reviewed the details of several packets, such as IP addresses, ports, and protocol information. This task helped me understand how different network protocols work together and gave me hands-on experience using Wireshark for packet analysis.
